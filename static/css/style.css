@@ -1,10 +1,10 @@
 :root{
-    --primary-color:#FFF07C;
+    --primary-color:#D72638;
     --secondary-color:#1c3fa8;
     --dark-color:#000;
     --light-color:#f4f4f4e3;
     --text-color: gray;
-    --showcase-background: url("../img/code2.jpg");
+    --showcase-background: url("../img/code3.jpg");
 }
 
 /* Basic styling */
@@ -37,6 +37,7 @@ a{
 
 a:hover{
     color: var(--primary-color);
+    cursor: pointer;
 }
 
 .hidden{
@@ -50,6 +51,7 @@ a:hover{
 /* Navigation */
 .navbar{
     position: fixed;
+    right: 0;
 }
 
 .navbar .desktop{
@@ -57,14 +59,28 @@ a:hover{
     padding-top: 10px;
 }
 
-.navbar .desktop ul{
-    display: flex;
-    gap: 30px;
-    justify-content: flex-start;
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 70px;
+    height: 70px;
+    z-index: 20;
+    cursor: pointer;
+    margin: 10px;
 }
 
-.navbar nav a{
-    font-size: 1.3rem;
+.toggle:hover{
+    cursor: pointer;
+}
+
+.navbar .line{
+    background-color: var(--primary-color);
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    border-radius: 20%;
+
 }
 
 body{
@@ -93,20 +109,27 @@ body{
 }
 
 .showcase h1{
-    font-size: 64px;
+    font-size: 92px;
+    color: #fff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+}
+
+.initials{
     color: var(--primary-color);
 }
 
 .showcase h2{
     font-size: 30px;
     color: #fff;
+    letter-spacing: 2px;
 }
 
 /* Footer */
 footer{
     position: fixed;
     bottom: 0;
-    right: 0;
+    left: 0;
     margin: 20px;
 }
 

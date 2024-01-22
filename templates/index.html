@@ -15,15 +15,11 @@
     <!--Navbar-->
     <section class="navbar">
         <div class="desktop container">
-            <div class="toggle"></div>
-            <nav class="links">
-                <ul>
-                    <li><a href="{{ url_for('get_home') }}">Home</a></li>
-                    <li><a href="{{ url_for('get_services') }}">About me</a></li>
-                    <li><a href="{{ url_for('get_projects') }}">Projects</a></li>
-                    <li><a href="{{ url_for('get_contact') }}">Contact me</a></li>
-                </ul>
-            </nav>
+            <div class="toggle">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
         <div class="mobile hidden">
             <form action="">
@@ -54,7 +50,7 @@
         <div class="container">
             <div class="push"></div>
             <div class="title">
-                <h1>Tamas Nemeth</h1>
+                <h1><span class="initials">T</span>amas <span class="initials">N</span>emeth</h1>
                 <h2>Software Developer</h2>
             </div>
             <div class="push"></div>
