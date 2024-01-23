@@ -168,6 +168,7 @@ footer{
     bottom: 0;
     left: 0;
     margin: 20px;
+    z-index: 40;
 }
 
 footer .social a{
