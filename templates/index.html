@@ -14,35 +14,24 @@
 <body>
     <!--Navbar-->
     <section class="navbar">
-        <div class="desktop container">
-            <div class="toggle">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-            </div>
+        <div class="toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-        <div class="mobile hidden">
+        <div class="nav hidden">
+            <div class="push"></div>
             <form action="">
+                <h1 class="initials hidden">T</h1>
                 <ul>
                     <li><a href="{{ url_for('get_home') }}">Home</a></li>
                     <li><a href="{{ url_for('get_services') }}">About me</a></li>
                     <li><a href="{{ url_for('get_projects') }}">Projects</a></li>
                     <li><a href="{{ url_for('get_contact') }}">Contact me</a></li>
                 </ul>
+                <h1 class="initials hidden">N</h1>
             </form>
-            <div class="social-bar">
-                <ul>
-                    <li>
-                        <a href="https://www.linkedin.com/in/tam%C3%A1s-n%C3%A9meth-0b23a012b/" target="_blank" ><i class="fab fa-linkedin fa-2x"></i></a>
-                    </li>
-                    <li>
-                        <a href="mailto: tamas.nemeth@tnemeth.co.uk" class="email-icon">
-                            <i class="fa-solid fa-at"></i>
-                        </a>
-                    </li>
-                </ul>
-
-            </div>
+            <div class="push"></div>
         </div>
      </section>
 
@@ -50,8 +39,8 @@
         <div class="container">
             <div class="push"></div>
             <div class="title">
-                <h1><span class="initials">T</span>amas <span class="initials">N</span>emeth</h1>
-                <h2>Software Developer</h2>
+                <h1 class=""><span class="initials">T</span>amas <span class="initials">N</span>emeth</h1>
+                <h2 class="">Software Developer</h2>
             </div>
             <div class="push"></div>
         </div>
@@ -64,5 +53,7 @@
             <a href="mailto: tamas.nemeth@tnemeth.co.uk" class="email-icon"><i class="fa-solid fa-at fa-2x"></i></a>
         </div>
      </footer>
+     <script src="../static/js/script.js" charset="UTF-8"></script>
 
 </body>
+</html>
