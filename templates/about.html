@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamas Nemeth</title>
+    <link rel="image_src" href="../static/img/robot1.jpg" />
+    <link rel="image_src" href="../static/img/robot2.jpg" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!--Navbar-->
+    <section class="navbar">
+        <div class="toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="nav hidden">
+            <div class="push"></div>
+            <form action="">
+                <h1 class="initials hidden">T</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About me</a></li>
+                    <li><a href="{{ url_for('get_projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('get_contact') }}">Contact me</a></li>
+                </ul>
+                <h1 class="initials hidden">N</h1>
+            </form>
+            <div class="push"></div>
+        </div>
+     </section>
+
+     <section class="about">
+        <div class="container">
+            <h1><span class="initials">A</span>bout <span class="initials">M</span>e</h1>
+            <div class="bio">
+                <img src="../static/img/me.jpg" alt="me">
+                <div class="text">
+                    <h2>BIO</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ipsum vitae, voluptas sapiente nostrum cumque, libero ad tenetur iusto veritatis aspernatur modi maxime quos? Deleniti dignissimos ut tempore architecto numquam!</p>
+                </div>
+            </div>
+            <div class="experience">
+                <div class="job">
+                    <h2>Iconsys</h2>
+                    <h3>Controls Engineer</h3>
+                    <h3>May 2021 - May 2022</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus cum temporibus eum ullam, expedita autem enim consequuntur mollitia, perferendis excepturi non deserunt tenetur? Illo dolor eligendi similique molestiae! Aspernatur sint quos quod obcaecati architecto iste voluptates quia. Nihil ea rerum dolore amet. Tenetur est, sint inventore deserunt nostrum ipsa unde..</p>
+                </div>
+                <div class="job">
+                    <h2>Wood PLC</h2>
+                    <h3>Robotics Engineer</h3>
+                    <h3>June 2018 - May 2021</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus cum temporibus eum ullam, expedita autem enim consequuntur mollitia, perferendis excepturi non deserunt tenetur? Illo dolor eligendi similique molestiae! Aspernatur sint quos quod obcaecati architecto iste voluptates quia. Nihil ea rerum dolore amet. Tenetur est, sint inventore deserunt nostrum ipsa unde..</p>
+                </div>
+                <div class="job">
+                    <h2>ABB</h2>
+                    <h3>Sales Support Engineer</h3>
+                    <h3>September 2015 - May 2018</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus cum temporibus eum ullam, expedita autem enim consequuntur mollitia, perferendis excepturi non deserunt tenetur? Illo dolor eligendi similique molestiae! Aspernatur sint quos quod obcaecati architecto iste voluptates quia. Nihil ea rerum dolore amet. Tenetur est, sint inventore deserunt nostrum ipsa unde..</p>
+                </div>
+            </div>
+            
+            <div class="skills">
+                <img src="../static/img/logos/python.png" alt="python logo">
+                <img src="../static/img/logos/csharp.png" alt="csharp logo">
+                <img src="../static/img/logos/html.png" alt="html logo">
+                <img src="../static/img/logos/css.png" alt="css logo">
+                <img src="../static/img/logos/js.png" alt="javascript logo">
+            </div>
+        </div>
+        
+        
+     </section>
+
+     <footer>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/tam%C3%A1s-n%C3%A9meth-0b23a012b/" target="_blank" ><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="https://github.com/nemetht91?tab=repositories" target="_blank"><i class="fa-brands fa-github fa-2x"></i></a>
+            <a href="mailto: tamas.nemeth@tnemeth.co.uk" class="email-icon"><i class="fa-solid fa-at fa-2x"></i></a>
+        </div>
+     </footer>
+     <script src="../static/js/script.js" charset="UTF-8"></script>
+
+</body>
+</html>
