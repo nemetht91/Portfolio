@@ -49,12 +49,7 @@ a:hover{
 }
 
 body{
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 255, 0.055),
-        rgba(0, 18, 66, 1)
-        
-      ), var(--showcase-background);
+    background-image:  var(--showcase-background);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -129,6 +124,7 @@ body{
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    background-color:  rgba(0, 18, 66, 0.7);
     
 }
 
@@ -218,8 +214,8 @@ body{
 }
 
 .job{
-    max-width: 300px;
-    padding-right: 10px;
+    max-width: 400px;
+    padding-right: 20px;
     border-right: var(--primary-color) 3px solid;
 }
 
@@ -267,9 +263,15 @@ footer .social a{
         grid-template-columns: repeat(2, 1fr);
         gap: 100px;
     }
+
+    body{
+        background-size: auto;
+        background-position: center;
+    }
 }
 
-@media(max-width: 900px){
+@media(max-width: 1000px){
+
 
     .about .container{
         padding: 0px 20px;
@@ -294,9 +296,7 @@ footer .social a{
         max-width: 600px;
     }
 
-    .job p{
-        
-    }
+
 
     .bio{
         flex-direction: column;
@@ -307,13 +307,21 @@ footer .social a{
         position: inherit;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        paddingbottom: 40px;
+        margin-bottom: 30px;
     }
 
+    footer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color:  rgba(0, 18, 66, 0.9);
+        padding: 10px;
+        margin: 0px;
+    }
     
 }
 
-@media(max-width: 500px){
+@media(max-width: 700px){
 
     .shifted-left,
     .shifted-right
@@ -327,12 +335,12 @@ footer .social a{
     }
 
 
-    .showcase h1{
-        font-size: 60px;
+    h1{
+        font-size: 48px;
     }
 
     .initials{
-        font-size: 72px;
+        font-size: 60px;
     }
 
     .showcase h2{
@@ -343,12 +351,5 @@ footer .social a{
         flex-direction: column;
     }
 
-    footer{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        background-color:  rgba(0, 18, 66, 0.9);
-        padding: 0px;
-        margin: 0px;
-    }
+
 }
