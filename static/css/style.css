@@ -214,6 +214,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 100px;
+    padding-bottom: 50px;
 }
 
 .job{
@@ -251,14 +252,65 @@ footer{
     left: 0;
     margin: 20px;
     z-index: 40;
+    
 }
+
+
 
 footer .social a{
     margin: 0px 10px;
 }
 
-@media(max-width: 1100px){
-  
+@media(max-width: 1300px){
+    .experience{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 100px;
+    }
+}
+
+@media(max-width: 900px){
+
+    .about .container{
+        padding: 0px 20px;
+        align-items: center;
+    }
+
+
+    .experience{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .job{
+        border-bottom: var(--primary-color) 3px solid;
+        border-right: none;
+        padding-bottom: 20px;
+        text-align: center;
+        padding-right: 0px;
+        max-width: 600px;
+    }
+
+    .job p{
+        
+    }
+
+    .bio{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .skills{
+        position: inherit;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        paddingbottom: 40px;
+    }
+
+    
 }
 
 @media(max-width: 500px){
@@ -287,13 +339,16 @@ footer .social a{
         font-size: 32px;
     }
 
+    .nav form{
+        flex-direction: column;
+    }
+
     footer{
         display: flex;
         justify-content: center;
         width: 100%;
-    }
-
-    .nav form{
-        flex-direction: column;
+        background-color:  rgba(0, 18, 66, 0.9);
+        padding: 0px;
+        margin: 0px;
     }
 }
