@@ -10,7 +10,7 @@ var subTitle = document.querySelector(".showcase h2");
 
 toggle.addEventListener("click", () => {
     navbar.classList.toggle("hidden");
-
+    toggle.classList.toggle("closed");
     mainTitle.classList.toggle("shifted-left");
     subTitle.classList.toggle("shifted-right");
 

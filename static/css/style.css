@@ -48,7 +48,16 @@ a:hover{
     display: flex;
 }
 
-
+body{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 255, 0.055),
+        rgba(0, 18, 66, 1)
+        
+      ), var(--showcase-background);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Navigation */
 
@@ -74,6 +83,8 @@ a:hover{
     height: 4px;
     margin: 6px;
     border-radius: 20%;
+    transition-duration: 0.8s;
+
 }
 
 .nav{
@@ -88,16 +99,21 @@ a:hover{
 
 }
 
-body{
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 255, 0.055),
-        rgba(0, 18, 66, 1)
-        
-      ), var(--showcase-background);
-    background-repeat: no-repeat;
-    background-size: cover;
+.closed div:nth-child(1){
+    transform: rotate(45deg) translateY(7px);
+    transition-duration: 0.8s;
 }
+
+.closed div:nth-child(2){
+    display: none;
+
+}
+
+.closed div:nth-child(3){
+    transform: rotate(-45deg) translateY(-7px);
+    transition-duration: 0.8s;
+}
+
 
 /* Showcase */
 .showcase .container,
