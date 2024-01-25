@@ -290,6 +290,8 @@ footer .social a{
         align-items: center;
         justify-content: center;
         gap: 40px;
+        padding-bottom: 10px;
+
     }
 
     .job{
@@ -314,7 +316,8 @@ footer .social a{
         position: inherit;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        margin-bottom: 30px;
+        margin-bottom: 70px;
+        padding: 0;
         justify-items: center;
     }
 
