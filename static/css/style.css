@@ -265,6 +265,7 @@ body{
 
 .projects .portfolio .project{
     width: 400px;
+    padding: 15px;
 }
 
 .projects h2{
@@ -289,7 +290,7 @@ body{
 .projects a:hover{
     border: var(--primary-color) solid 2px;
     color: var(--primary-color);
-    transition-duration: 0.2s;
+    transition-duration: 0.25s;
 
 
 }
@@ -307,7 +308,7 @@ body{
 
 .projects img:hover{
     padding: 1px;
-    transition-duration: 0.2s;
+    transition-duration: 0.25s;
 
 }
 
@@ -445,14 +446,16 @@ footer .social a{
 
 
     h1{
-        font-size: 48px;
+        font-size: 40px;
     }
+
 
  
 
     .initials{
-        font-size: 60px;
+        font-size: 50px;
     }
+
 
     .showcase h2{
         font-size: 32px;
