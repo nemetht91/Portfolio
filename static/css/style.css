@@ -160,12 +160,10 @@ body{
     transform:  translateY(-25vh);
     transition-duration: 0.8s;
     text-align: left;
-    font-size: 40px;
 }
 
 .shifted-up .initials{
     transition-duration: 0.8s;
-    font-size: 50px;
 }
 
 
@@ -536,4 +534,14 @@ footer .social a{
     }
 
 
+}
+
+@media(max-width: 400px){
+    h1{
+        font-size: 30px;
+    }
+
+    .initials{
+        font-size: 40px;
+    }
 }
