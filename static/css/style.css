@@ -509,9 +509,7 @@ footer .social a{
         width: max-content;
     }
 
-    .contact a span{
-        display: none;
-    }
+    
 
     .contact a{
         font-size: 1rem;
