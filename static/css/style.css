@@ -290,7 +290,7 @@ body{
 .projects a:hover{
     border: var(--primary-color) solid 2px;
     color: var(--primary-color);
-    transition-duration: 0.25s;
+    transition-duration: 0.s;
 
 
 }
@@ -426,7 +426,7 @@ footer .social a{
 
     .about h1,
     .projects h1{
-        padding-top: 35px;
+        padding-top: 50px;
     }
     
 }
