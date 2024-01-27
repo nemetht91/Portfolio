@@ -312,7 +312,40 @@ body{
 
 }
 
+/* Contact */
+.contact .container{
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    background-color:  rgba(0, 18, 66, 0.9);
+    color: #fff;
+    min-height: 100vh;
+}
 
+.contact a{
+    font-size: 1.5rem;
+    border: white solid 2px;
+    padding: 10px;
+}
+
+.contact a span{
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.contact a:hover{
+    border: var(--primary-color) solid 2px;
+    transition-duration: 0.25s;
+}
+
+.contact a:hover span{
+    color: white;
+    transition-duration: 0.25s;
+
+}
 
 /* Footer */
 footer{
@@ -424,8 +457,18 @@ footer .social a{
         padding-left: 100%;
     }
 
+    h1{
+        font-size: 40px;
+    }
+
+
+    .initials{
+        font-size: 50px;
+    }
+
     .about h1,
-    .projects h1{
+    .projects h1,
+    .contact h1{
         padding-top: 50px;
     }
     
@@ -450,10 +493,29 @@ footer .social a{
     }
 
 
- 
-
     .initials{
         font-size: 50px;
+    }
+
+    .contact{
+        text-align: center;
+    }
+
+    .contact .container{
+        gap: 20px;
+    }
+
+    .contact h1{
+        width: max-content;
+    }
+
+    .contact a span{
+        display: none;
+    }
+
+    .contact a{
+        font-size: 1rem;
+        width: max-content;
     }
 
 
