@@ -156,20 +156,20 @@ body{
 
 }
 
-.shifted-left{
+.shifted-up{
     transform:  translateY(-25vh);
     transition-duration: 0.8s;
     text-align: left;
     font-size: 40px;
 }
 
-.shifted-left .initials{
+.shifted-up .initials{
     transition-duration: 0.8s;
     font-size: 50px;
 }
 
 
-.shifted-right{
+.shifted-down{
     transform:  translateY(20vh);
     transition-duration: 0.8s;
     display: inline-block;
@@ -325,10 +325,20 @@ body{
     min-height: 100vh;
 }
 
+.contact .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition-duration: 0.8s;
+}
+
 .contact a{
     font-size: 1.5rem;
     border: white solid 2px;
     padding: 10px;
+    display: block;
 }
 
 .contact a span{
