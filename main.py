@@ -21,6 +21,11 @@ def get_portfolio():
     return render_template("projects.html")
 
 
+@app.route('/project')
+def get_project():
+    return render_template("project.html")
+
+
 @app.route('/contact')
 def get_contact():
     return render_template("contact.html")
