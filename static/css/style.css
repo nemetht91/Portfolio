@@ -317,10 +317,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 50px;
     background-color:  rgba(0, 18, 66, 0.9);
     color: #fff;
     min-height: 100vh;
+}
+
+.project h1{
+    font-size: 40px;
+}
+
+.project .initials{
+    font-size: 50px;
 }
 
 .project .info{
@@ -329,9 +338,13 @@ body{
     justify-content: space-between;
 }
 
+.project .text{
+    max-width: 90vw;
+}
+
 .project .info .line{
     height: 400px;
-    width: 5px;
+    width: 7.5px;
     background-color: var(--primary-color);
 }
 
@@ -344,10 +357,11 @@ body{
 
 
 .project .info img{
-    width: 600px;
+    height: 380px;
     align-self: center;
     margin-right: 40px;
-
+    max-width: 90vw;
+    object-fit: contain;
 }
 
 .project .info .text{
@@ -456,12 +470,26 @@ footer .social a{
         gap: 50px;
     }
 
+    .project .info{
+        flex-direction: column;
+    }
+
+    .project .line{
+        display: none;
+    }
+
+    .project .languages{
+        margin-bottom: 70px;
+
+    }
+
 }
 
 @media(max-width: 1000px){
 
 
-    .about .container{
+    .about .container,
+    .project .container{
         padding: 0px 20px;
         align-items: center;
     }
@@ -513,6 +541,30 @@ footer .social a{
         grid-column: span 2;
     }
 
+    .project .container{
+        padding: 0px 20px;
+        align-items: center;
+
+    }
+
+
+    .project .info .text,
+    .project .info img{
+        margin: 10px;
+    }
+
+    .project .info img{
+        height:fit-content
+    }
+
+    .project .languages{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 0px;
+    }
+
+
     footer{
         display: flex;
         justify-content: center;
@@ -542,7 +594,8 @@ footer .social a{
 
     .about h1,
     .projects h1,
-    .contact h1{
+    .contact h1,
+    .project h1{
         padding-top: 50px;
     }
     
@@ -564,6 +617,14 @@ footer .social a{
 
     h1{
         font-size: 40px;
+    }
+
+    .project h1{
+        text-align: center;
+    }
+
+    .project .info .text a{
+        font-size: 1rem;
     }
 
 
@@ -598,6 +659,10 @@ footer .social a{
     .nav form{
         flex-direction: column;
     }
+
+    
+
+
 
 
 }
