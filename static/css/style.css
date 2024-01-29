@@ -310,6 +310,72 @@ body{
 
 }
 
+/* Project */
+
+.project .container{
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    background-color:  rgba(0, 18, 66, 0.9);
+    color: #fff;
+    min-height: 100vh;
+}
+
+.project .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.project .info .line{
+    height: 400px;
+    width: 5px;
+    background-color: var(--primary-color);
+}
+
+
+.project h2{
+    margin: 20px 0px;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+
+.project .info img{
+    width: 600px;
+    align-self: center;
+    margin-right: 40px;
+
+}
+
+.project .info .text{
+    margin-left: 40px;
+}
+
+.project .info a{
+    display: block;
+    font-size: 1.4rem;
+    margin: 20px 0px;
+    border-bottom: white solid 2px;
+    width: max-content;
+}
+
+.project .info a:hover{
+    border-bottom: var(--primary-color) solid 2px;
+
+}
+
+.project .languages{
+    margin-top: 50px;
+}
+
+.project .languages img{
+    height: 75px;
+    margin: 20px;
+}
+
 /* Contact */
 .contact .container{
     padding: 0px 150px;
