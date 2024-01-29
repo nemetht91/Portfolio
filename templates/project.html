@@ -2,21 +2,25 @@
 
      <section class="project">
         <div class="container">
-            <h1><span class="initials">A</span>utomation X <span class="initials">W</span>ebsite</h1>
+            <h1><span class="initials">{{ project.title[0] }}</span>{{ project.title[1:] }}</h1>
             <div class="info">
-                <img src="../static/img/projects/automationX.png" alt="Automation-X website">
+                <img src={{project.img_url}} alt={{project.title}}>
                 <div class="line"></div>
                 <div class="text">
                     <div>
                         <h2>Description</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum illo vitae, aperiam eaque quos deleniti, quis recusandae repudiandae maiores nemo esse eligendi expedita delectus molestiae vel vero error obcaecati labore blanditiis laboriosam, cum eos voluptate earum! Sunt, distinctio. Adipisci est hic vel eius qui quibusdam tenetur mollitia quia labore esse!</p>
+                        <p>{{ project.description }}</p>
                     </div>
                     <div>
                         <h2>Challenges</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, nisi deleniti. Esse, officia. Accusantium natus qui dignissimos, accusamus magni aut sequi molestiae! Accusamus ipsa voluptatibus impedit quis vel facilis tenetur, repudiandae natus. Labore, voluptatum voluptas. Magnam nesciunt maiores corrupti non saepe, inventore tempore et. Illum earum suscipit dolores doloremque accusantium!</p>
+                        <p>{{ project.challenges }}</p>
                     </div>
                     <div>
-                        <a target="_blank" href="https://automation-x-test-server.onrender.com">https://automation-x-test-server.onrender.com/</a>
+                        {% if project.website %}
+                        <a target="_blank" href={{project.url}}>{{ project.url }}/</a>
+                        {% else %}
+                        <a target="_blank" href={{project.url}}>Download/</a>
+                        {% endif %}
                     </div>
                 </div> 
             </div>
