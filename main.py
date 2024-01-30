@@ -12,16 +12,29 @@ app.secret_key = environ.get("SECRET_KEY")
 app.config['SESSION_TYPE'] = 'filesystem'
 
 ##CONNECT TO DB
-# engine = sqlalchemy.create_engine(DATABASE_STRING, pool_pre_ping=True, pool_size=10, max_overflow=20, pool_recycle=300,
-#                                   connect_args={
-#                                       "keepalives": 1,
-#                                       "keepalives_idle": 30,
-#                                       "keepalives_interval": 10,
-#                                       "keepalives_count": 5,
-#                                   }
-#                                   )
+DATABASE_SCHEME = environ.get("DATABASE_SCHEME")
+DATABASE_USER = environ.get("DATABASE_SCHEME")
+DATABASE_PASSWORD = environ.get("DATABASE_SCHEME")
+DATABASE_HOST = environ.get("DATABASE_SCHEME")
+DATABASE_PORT = environ.get("DATABASE_SCHEME")
+DATABASE_NAME = environ.get("DATABASE_SCHEME")
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
+database_string = f"{DATABASE_SCHEME}://{DATABASE_USER}:{DATABASE_PASSWORD}@{DATABASE_HOST}" \
+                  f"/{DATABASE_NAME}"
+
+
+engine = sqlalchemy.create_engine(database_string, pool_pre_ping=True, pool_size=10, max_overflow=20, pool_recycle=300,
+                                  connect_args={
+                                      "keepalives": 1,
+                                      "keepalives_idle": 30,
+                                      "keepalives_interval": 10,
+                                      "keepalives_count": 5,
+                                  }
+                                  )
+
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///portfolio.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = database_string
+
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
