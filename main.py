@@ -1,8 +1,11 @@
 from flask import Flask, render_template, redirect, url_for, request, flash, abort
-from os import environ
+from os import environ, path
 import sqlalchemy.exc
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
+
+
+LANGUAGE_LOGO_PATH = "static/img/logos/"
 
 app = Flask(__name__)
 app.secret_key = environ.get("SECRET_KEY")
@@ -34,7 +37,7 @@ class Project(db.Model):
     url = db.Column(db.String(500), nullable=False)
     github_url = db.Column(db.String(500), nullable=False)
     website = db.Column(db.Boolean, nullable=True)
-    languages = db.Column(db.String(250), unique=True, nullable=False)
+    languages = db.Column(db.String(250), nullable=False)
 
 
 with app.app_context():
@@ -65,7 +68,8 @@ def get_portfolio():
 @app.route('/project/<int:project_id>')
 def get_project(project_id):
     project = Project.query.get(project_id)
-    return render_template("project.html", project=project)
+    languages = get_language_logos(project.languages)
+    return render_template("project.html", project=project, languages=languages)
 
 
 @app.route('/contact')
@@ -77,6 +81,13 @@ def get_all_projects():
     return Project.query.order_by(desc(Project.id)).all()
 
 
+def get_language_logos(raw_languages: str):
+    languages = raw_languages.split(", ")
+    language_logos = []
+    for language in languages:
+        if path.isfile(f"{LANGUAGE_LOGO_PATH}{language}.png"):
+            language_logos.append(f"../{LANGUAGE_LOGO_PATH}{language}.png")
+    return language_logos
 
 
 if __name__ == "__main__":

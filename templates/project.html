@@ -17,19 +17,18 @@
                     </div>
                     <div>
                         {% if project.website %}
-                        <a target="_blank" href={{project.url}}>{{ project.url }}/</a>
+                        <a target="_blank" href={{project.url}}>{{ project.url }}</a>
                         {% else %}
-                        <a target="_blank" href={{project.url}}>Download/</a>
+                        <a target="_blank" href={{project.url}}>Download</a>
                         {% endif %}
                     </div>
                 </div> 
             </div>
             <div>
                 <div class="languages">
-                    <img src="../static/img/logos/python.png" alt="python logo">
-                    <img src="../static/img/logos/html.png" alt="html logo">
-                    <img src="../static/img/logos/css.png" alt="css logo">
-                    <img src="../static/img/logos/js.png" alt="javascript logo">
+                    {% for language in languages %}
+                        <img src={{language}} alt="logo">
+                    {% endfor %}
                 </div>
             </div>
                             
