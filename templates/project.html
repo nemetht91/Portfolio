@@ -2,7 +2,11 @@
 
      <section class="project">
         <div class="container">
-            <h1><span class="initials">{{ project.title[0] }}</span>{{ project.title[1:] }}</h1>
+            <h1>
+                {% for word in project.title.split(' ') %}
+                <span class="initials">{{ word[0] }}</span>{{ word[1:] }}
+                {% endfor %}
+            </h1>
             <div class="info">
                 <img src={{project.img_url}} alt={{project.title}}>
                 <div class="line"></div>
