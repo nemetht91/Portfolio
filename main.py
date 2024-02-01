@@ -59,8 +59,8 @@ with app.app_context():
     db.session.commit()
 
     # close the sql pool connections so that new forks create their own connection.
-    #db.session.remove()
-    #db.engine.dispose()
+    db.session.remove()
+    db.engine.dispose()
 
 @app.route('/')
 def get_home():
