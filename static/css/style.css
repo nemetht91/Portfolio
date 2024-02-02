@@ -129,6 +129,8 @@ p{
 }
 
 
+
+
 /* Showcase */
 .showcase .container,
 .nav{
@@ -139,7 +141,7 @@ p{
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color:  rgba(255, 255, 255, 0.9);
@@ -149,12 +151,37 @@ p{
 
  h1{
     font-size: 72px;
-    color: var(--text-color);
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     letter-spacing: 2px;
     transition-duration: 0.8s;
 
 }
+
+.outer{
+    display: grid;
+    grid-template: 1fr / 1fr;
+    place-items: center;
+}
+
+.outer > * {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+  }
+
+  .title{
+    z-index: 2;
+  }
+
+.blob {
+    z-index: 1;
+    fill: var(--secondary-color);
+    opacity: 80%;
+    width: 80vmax;
+    z-index: -1;
+    animation: move 10s ease-in-out infinite;
+    transform-origin: 50% 50%;
+  }
 
 .initials{
     font-size: 92px;
@@ -166,7 +193,7 @@ p{
 
 .showcase h2{
     font-size: 40px;
-    color: var(--text-color);
+    color: white;
     letter-spacing: 2px;
     transition-duration: 0.8s;
 
@@ -528,6 +555,12 @@ footer .social a{
 
     }
 
+    .blob {
+
+        width: 100vmax;
+       
+      }
+
 }
 
 @media(max-width: 1000px){
@@ -538,6 +571,8 @@ footer .social a{
         padding: 0px 20px;
         align-items: center;
     }
+
+ 
 
 
     /* About */
