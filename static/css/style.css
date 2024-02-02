@@ -212,10 +212,6 @@ p{
     font-size: 2rem;
     margin-bottom: 20px;
 }
-.about h3{
-    width: max-content;
-
-}
 
 .bio{
     display: flex;
@@ -506,11 +502,7 @@ footer .social a{
 }
 
 @media(max-width: 1400px){
-    .experience{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 100px;
-    }
+ 
 
     .projects .portfolio{
         display: grid;
@@ -543,6 +535,15 @@ footer .social a{
     }
 
 
+    /* About */
+    .about .bio{
+
+        flex-direction: column-reverse;
+        margin: 30px 0px;
+        gap: 20px;
+    }
+
+
     .experience{
         display: flex;
         flex-direction: column;
@@ -552,11 +553,7 @@ footer .social a{
         padding-bottom: 10px;
     }
 
-    .projects .portfolio{
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 50px;
-    }
+
 
     .job{
         border-bottom: var(--primary-color) 3px solid;
@@ -565,9 +562,11 @@ footer .social a{
         text-align: center;
         padding-right: 0px;
         max-width: 600px;
+        flex-direction: column;
+        align-items: center;
     }
 
-
+  
 
     .bio{
         flex-direction: column;
@@ -587,6 +586,14 @@ footer .social a{
 
     .skills img:nth-child(5){
         grid-column: span 2;
+    }
+
+    /* Project */
+
+    .projects .portfolio{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
     }
 
     .project .container{
@@ -708,7 +715,19 @@ footer .social a{
         flex-direction: column;
     }
 
+    /* about */
+    .bio img{
+        height: 200px;
+        width: 200px;
+       
+    }
     
+    .image{
+        min-width: 250px;
+        height: 250px;
+
+    
+    }
 
 
 
