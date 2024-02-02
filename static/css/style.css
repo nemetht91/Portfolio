@@ -62,7 +62,13 @@ p{
     font-size: 1.1rem;
 }
 
-
+h1{
+    font-size: 72px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 2px;
+    transition-duration: 0.8s; 
+    color: #000;
+}
 
 /* Navigation */
 
@@ -149,13 +155,8 @@ p{
 }
 
 
- h1{
-    font-size: 72px;
+.showcase h1{
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 2px;
-    transition-duration: 0.8s;
-
 }
 
 .outer{
