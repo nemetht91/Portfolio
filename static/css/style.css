@@ -1,9 +1,9 @@
 :root{
-    --primary-color:#D72638;
-    --secondary-color:#1c3fa8;
+    --primary-color:#219ebc;
+    --secondary-color: #001242;
     --dark-color:#000;
     --light-color:#f4f4f4e3;
-    --text-color: gray;
+    --text-color: black;
     --showcase-background: url("https://github.com/nemetht91/Portfolio/blob/main/static/img/code3.jpg?raw=true");
 }
 
@@ -32,12 +32,14 @@ ul{
 
 a{
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-color);
 }
 
 a:hover{
     color: var(--primary-color);
     cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 0.25s;
 }
 
 .hidden{
@@ -54,6 +56,10 @@ body{
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+p{
+    font-size: 1.1rem;
 }
 
 /* Navigation */
@@ -176,48 +182,84 @@ body{
 
 /* About */
 
+.about{
+    background-color:  rgba(0, 18, 66, 0.9);
+    background-color:  rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+}
+
 .about .container{
-    padding: 0px 150px;
+    max-width: 1300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 50px;
-    background-color:  rgba(0, 18, 66, 0.9);
-    color: #fff;
+ 
+
+    color: var(--text-color);
     min-height: 100vh;
+}
+
+.about h1{
+    color: var(--text-color);
+    align-self: c;
 }
 
 .about h2{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.about h3{
+    width: max-content;
+
 }
 
 .bio{
     display: flex;
     align-items: center;
-    max-width: 800px;
-    gap: 50px;
+    justify-content: space-between;
+    margin: 100px 0px;
+    width: 100%;
+}
+
+.bio .text{
+    max-width: 600px;
+
 }
 
 .bio img{
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     border-radius: 50%;
     object-fit: cover;
-    border: var(--primary-color) 2px solid;
+    border: var(--primary-color) solid 0.5px;
+}
+
+.image{
+    min-width: 350px;
+    height: 350px;
+    background-color: var(--primary-color);
+    border-radius: 50% 50% 52% 48% / 32% 40% 60% 68% ;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 50px;
+
 }
 
 .experience{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
+  
     padding-bottom: 50px;
 }
 
 .job{
-    max-width: 400px;
-    padding-right: 20px;
-    border-right: var(--primary-color) 3px solid;
+    padding: 25px 0px;
+    
+    border-bottom: var(--primary-color) 3px solid;
+    display: flex;
 }
 
 .job h2{
@@ -226,6 +268,12 @@ body{
 
 .job p{
     margin-top: 10px;
+}
+
+.header{
+    
+    min-width: 300px;
+
 }
 
 .skills{
