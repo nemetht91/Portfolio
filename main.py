@@ -29,6 +29,7 @@ engine = sqlalchemy.create_engine(database_string, pool_pre_ping=True, pool_size
                                       "keepalives_idle": 30,
                                       "keepalives_interval": 10,
                                       "keepalives_count": 5,
+                                       "sslmode": "disable"
                                   }
                                   )
 
