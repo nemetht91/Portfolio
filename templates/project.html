@@ -20,10 +20,9 @@
                         <p>{{ project.challenges }}</p>
                     </div>
                     <div>
+                        <a target="_blank" href={{project.github_url}}><i class="fa-brands fa-github fa"></i>GitHub</a>
                         {% if project.website %}
-                        <a target="_blank" href={{project.url}}>{{ project.url }}</a>
-                        {% else %}
-                        <a target="_blank" href={{project.url}}>Download</a>
+                        <a target="_blank" href={{project.url}}>{{ project.url }}</a>                        
                         {% endif %}
                     </div>
                 </div> 
