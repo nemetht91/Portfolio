@@ -273,6 +273,19 @@ h1{
     border: var(--primary-color) solid 0.5px;
 }
 
+.bio .text a{
+    margin-top: 10px;
+    border-bottom: white solid 1px;
+    display: block;
+    width: fit-content;
+    font-size: 1.1rem;
+}
+
+.bio .text a:hover{
+    transform: none;
+    border-bottom: var(--primary-color) solid 1px;
+}
+
 .image{
     min-width: 350px;
     height: 350px;
@@ -634,6 +647,7 @@ footer .social a{
         border-bottom: var(--primary-color) 3px solid;
         padding-bottom: 20px;
     }
+
 
     .image{
         margin-right: 0px;
