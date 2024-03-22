@@ -314,7 +314,7 @@ h1{
 .skills{
     position: fixed;
     right: 0;
-    top: 20vh;
+    top: 12.5vh;
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -649,9 +649,7 @@ footer .social a{
         justify-items: center;
     }
 
-    .skills img:nth-child(5){
-        grid-column: span 2;
-    }
+   
 
     /* Project */
 
