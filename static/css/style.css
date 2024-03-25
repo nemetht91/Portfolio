@@ -228,7 +228,7 @@ h1{
 }
 
 .about .container{
-
+    padding: 0px 15px;
     max-width: 1300px;
     display: flex;
     flex-direction: column;
@@ -273,10 +273,12 @@ h1{
     border: var(--primary-color) solid 0.5px;
 }
 
+.bio .text p{
+    margin-bottom: 10px;
+}
+
 .bio .text a{
-    margin-top: 10px;
     border-bottom: white solid 1px;
-    display: block;
     width: fit-content;
     font-size: 1.1rem;
 }
@@ -561,7 +563,17 @@ footer .social a{
     margin: 0px 10px;
     
 }
-
+@media(max-width: 1500px){
+    .skills{
+        position: inherit;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-bottom: 20px;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 @media(max-width: 1400px){
  
 
@@ -610,7 +622,7 @@ footer .social a{
 
     /* About */
     .about .bio{
-
+        margin-left: 10px;
         flex-direction: column-reverse;
         margin: 30px 0px;
         gap: 20px;
@@ -646,7 +658,14 @@ footer .social a{
         text-align: center;
         border-bottom: var(--primary-color) 3px solid;
         padding-bottom: 20px;
+        
     }
+
+    .bio a{
+        text-align: center;
+    }
+
+   
 
 
     .image{
